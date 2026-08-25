@@ -18,9 +18,10 @@ import {
   MusicPlayer,
   ScrollProgressIndicator,
 } from '../components';
-import { NAVIGATION_SECTIONS, WEDDING_CONFIG } from '@/constants';
+import { NAVIGATION_SECTIONS } from '@/constants';
+import type { WeddingConfigType } from '@/types/wedding';
 
-export default function HomeView() {
+export default function HomeView({ weddingConfig }: { weddingConfig: WeddingConfigType }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showLetter, setShowLetter] = useState(true);
 
@@ -58,7 +59,7 @@ export default function HomeView() {
     return (
       <LetterAnimation
         onOpen={handleLetterOpen}
-        coupleName={`${WEDDING_CONFIG.bride.name} & ${WEDDING_CONFIG.groom.name}`}
+        coupleName={`${weddingConfig.bride.name} & ${weddingConfig.groom.name}`}
       />
     );
   }
@@ -74,7 +75,7 @@ export default function HomeView() {
       <section id="hero" className="relative">
         <HeroSection
           isLoaded={isLoaded}
-          couple={WEDDING_CONFIG}
+          couple={weddingConfig}
           onScrollToSection={scrollToSection}
         />
       </section>
@@ -82,8 +83,8 @@ export default function HomeView() {
       {/* Couple Introduction */}
       <section id="couple" className="relative">
         <CoupleIntroduction
-          bride={WEDDING_CONFIG.bride}
-          groom={WEDDING_CONFIG.groom}
+          bride={weddingConfig.bride}
+          groom={weddingConfig.groom}
           isVisible={isLoaded}
         />
       </section>
@@ -91,15 +92,15 @@ export default function HomeView() {
       {/* Wedding Details */}
       <section id="details" className="relative">
         <WeddingDetailsCard
-          date={WEDDING_CONFIG.date}
-          venue={WEDDING_CONFIG.venue}
+          date={weddingConfig.date}
+          venue={weddingConfig.venue}
         />
-        <CountdownTimer targetDate={WEDDING_CONFIG.date} />
+        <CountdownTimer targetDate={weddingConfig.date} />
       </section>
 
       {/* Venue Information */}
       <section id="venue" className="relative">
-        <VenueInformation venue={WEDDING_CONFIG.venue} />
+        <VenueInformation venue={weddingConfig.venue} />
         <EventSchedule />
       </section>
 
@@ -116,8 +117,8 @@ export default function HomeView() {
       {/* Closing Message */}
       <section id="closing" className="relative">
         <ClosingMessage
-          bride={WEDDING_CONFIG.bride.fullName}
-          groom={WEDDING_CONFIG.groom.fullName}
+          bride={weddingConfig.bride.fullName}
+          groom={weddingConfig.groom.fullName}
         />
       </section>
 
