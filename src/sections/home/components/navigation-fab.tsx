@@ -32,7 +32,7 @@ export default function NavigationFAB({
     <motion.div
       initial={{ opacity: 0, scale: 0, y: 100 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.8, type: 'spring', stiffness: 200 }}
+      transition={{ duration: 0.6, delay: 0.8, type: 'spring' as const, stiffness: 200 }}
       className="fixed bottom-6 right-6 z-50"
     >
       {/* Progress Ring */}
@@ -64,7 +64,7 @@ export default function NavigationFAB({
               pathLength:
                 (sections.indexOf(activeSection) + 1) / sections.length,
             }}
-            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            transition={{ duration: 0.8, ease: 'easeInOut' as const }}
             style={{
               strokeDasharray: '175.93',
               strokeDashoffset: 0,
@@ -112,7 +112,7 @@ export default function NavigationFAB({
               }}
               transition={{
                 rotate: { duration: 8, repeat: Infinity, ease: 'linear' },
-                scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
+                scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' as const },
               }}
               className="text-2xl filter drop-shadow-sm"
             >

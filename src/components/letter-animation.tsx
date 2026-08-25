@@ -229,7 +229,7 @@ export const LetterAnimation = ({
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: 'easeInOut',
+                ease: 'easeInOut' as const,
               }}
               className="text-sm sm:text-base text-gray-600 font-medium"
             >
@@ -246,7 +246,7 @@ export const LetterAnimation = ({
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: 'easeInOut',
+                  ease: 'easeInOut' as const,
                 }}
                 className="text-2xl"
               >

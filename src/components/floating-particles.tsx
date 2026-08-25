@@ -18,7 +18,7 @@ export function FloatingParticles() {
             duration: 3 + i,
             repeat: Infinity,
             delay: i * 0.8,
-            ease: 'easeInOut',
+            ease: 'easeInOut' as const,
           }}
           style={{
             left: `${20 + i * 30}%`,

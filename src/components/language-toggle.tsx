@@ -37,7 +37,7 @@ export function LanguageToggle() {
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: 'easeInOut' as const,
         }}
         whileHover={{ scale: 1.2, rotate: 10 }}
       >

@@ -107,7 +107,7 @@ export const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
               transition={{
                 duration: 0.6,
                 delay: index * 0.1 + 0.2,
-                type: 'spring',
+                type: 'spring' as const,
                 stiffness: 100,
               }}
               className="relative group"

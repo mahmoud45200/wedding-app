@@ -235,7 +235,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
         transition={{
           duration: 0.6,
           delay: 1.0,
-          type: 'spring',
+          type: 'spring' as const,
           stiffness: 200,
         }}
         className={`fixed bottom-24 right-6 z-50 ${className}`}
@@ -284,7 +284,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
               animate={{
                 pathLength: progress / 100,
               }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              transition={{ duration: 0.3, ease: 'easeInOut' as const }}
               style={{
                 strokeDasharray: '175.93',
                 strokeDashoffset: 0,
@@ -355,7 +355,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                     transition={{
                       duration: 1.5,
                       repeat: Infinity,
-                      ease: 'easeInOut',
+                      ease: 'easeInOut' as const,
                     }}
                     className="w-1 h-3 bg-gradient-to-t from-cyan-500 to-blue-500 rounded-full"
                   />
@@ -366,7 +366,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                     transition={{
                       duration: 1.5,
                       repeat: Infinity,
-                      ease: 'easeInOut',
+                      ease: 'easeInOut' as const,
                       delay: 0.2,
                     }}
                     className="w-1 h-4 bg-gradient-to-t from-blue-500 to-purple-500 rounded-full"
@@ -378,7 +378,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                     transition={{
                       duration: 1.5,
                       repeat: Infinity,
-                      ease: 'easeInOut',
+                      ease: 'easeInOut' as const,
                       delay: 0.4,
                     }}
                     className="w-1 h-3 bg-gradient-to-t from-purple-500 to-cyan-500 rounded-full"
@@ -393,7 +393,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    ease: 'easeInOut',
+                    ease: 'easeInOut' as const,
                   }}
                   className="text-2xl filter drop-shadow-sm"
                 >
@@ -449,7 +449,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                 transition={{
                   duration: 1,
                   repeat: Infinity,
-                  ease: 'easeInOut',
+                  ease: 'easeInOut' as const,
                 }}
                 className="w-2 h-2 bg-white rounded-full"
               />
@@ -472,7 +472,7 @@ export default function MusicPlayer({ className = '' }: MusicPlayerProps) {
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  ease: 'easeInOut',
+                  ease: 'easeInOut' as const,
                 }}
                 className="text-white text-xs font-bold"
               >
